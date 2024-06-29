@@ -1,0 +1,59 @@
+.reviwes {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @media ($tablet) {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+    
+    &__image {
+        width: 7.5rem;
+        height: 7.5rem;
+        border-radius: 50%;
+        flex-basis: 50%;
+        @include img();
+        margin-bottom: 2.6rem;
+
+        @media ($tablet) {
+            margin-bottom: 0;
+            margin-right: 2.7rem;
+        }
+    }
+
+    &__text {
+        @include p2();
+        position: relative;
+        background-color: $gray;
+        padding-left: 1.5rem;
+        padding: 1.6rem 2rem 1rem 1.5rem;
+        border-radius: 1rem;
+
+        &::before {
+            content: '';
+            position: absolute;
+            background-color: $gray;
+            width: 2rem;
+            height: 2rem;
+            top: 2.8rem;
+            left: calc(50% - 1rem);
+            transform: rotate(45deg);
+
+            @media ($tablet){
+                top: 2.8rem;
+                left: -1rem;
+            }
+        }
+
+        &-item {
+            font-style: italic;
+            margin-bottom: 0.8rem;
+        }
+
+        &-autor {
+            color: $second;
+        }
+    }
+
+}

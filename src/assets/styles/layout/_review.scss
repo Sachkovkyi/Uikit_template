@@ -1,0 +1,32 @@
+.review {
+    @include section();
+
+    &__title {
+        @include h2();
+
+    }
+
+    &__items {
+        display: flex;
+        flex-direction: column;
+
+        @media ($tablet){
+            flex-wrap: wrap;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
+        .reviwes {
+            margin-bottom: 2.5rem;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+
+            @media ($tablet) {
+                flex-basis: calc(50% - 3rem);
+
+            }
+        }
+    }
+}

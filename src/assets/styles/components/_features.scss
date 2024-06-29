@@ -1,0 +1,18 @@
+.feature {
+    padding-left: 4.2rem;
+    width: 100%;
+    position: relative;
+
+    &__text {
+        @include p1();
+
+    }
+
+    &::before {
+        content: url(../images/features-icon.svg);
+        position: absolute;
+        left: 0;
+        top: 0.4rem;
+    }
+    
+}
